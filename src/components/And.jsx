@@ -15,7 +15,7 @@ const And = ({argumnet1, argumnet2, setValue, textFields, flagAnd, flagOr}) => {
     const [argument1, setArgument1] = useState(false);
     const [and1, setAnd1] = useState(false);
     const [or1, setOr1] = useState(false);
-    const [flag, setFlag] = useState(false);
+    // const [flag, setFlag] = useState(false);
 
 
     const handleClick = (e) => {
@@ -68,7 +68,7 @@ const And = ({argumnet1, argumnet2, setValue, textFields, flagAnd, flagOr}) => {
             setAnd1(!and1);
           }else if(tar === 'or'){
             setSelect1(!select1);
-            setOr(!or1);
+            setOr1(!or1);
           }
       }
 
@@ -77,24 +77,24 @@ const And = ({argumnet1, argumnet2, setValue, textFields, flagAnd, flagOr}) => {
         setValue(e.target.value);
       }
     
-      const handleArgument = (e) => {
-        const tar = e.target.value;
-        // console.log(tar);
+    //   const handleArgument = (e) => {
+    //     const tar = e.target.value;
+    //     // console.log(tar);
         
-        // console.log(argumnet2)
-        if(tar === "My Arg"){
-          console.log(argumnet1)
-          setValue(argumnet1)
-          // console.log(value)
-          // handleArgument1();
-        }else{
-          console.log(argumnet2)
-          setValue(argumnet2)
-        //   console.log(value)
-          // handleArgument2();
-        }
+    //     // console.log(argumnet2)
+    //     if(tar === "My Arg"){
+    //       console.log(argumnet1)
+    //       setValue(argumnet1)
+    //       // console.log(value)
+    //       // handleArgument1();
+    //     }else{
+    //       console.log(argumnet2)
+    //       setValue(argumnet2)
+    //     //   console.log(value)
+    //       // handleArgument2();
+    //     }
         
-      }
+    //   }
       const handleAnd = () => {
         if(flagAnd){
             const value = argument1 & argumnet2;
@@ -167,9 +167,9 @@ const And = ({argumnet1, argumnet2, setValue, textFields, flagAnd, flagOr}) => {
 
           
           {op.map((text, index)=>(
-            <Select handleSelect={handleSelect}
-                handleClick={handleClick}
-            />
+            <div>
+                <Select />
+            </div>
           ))}
           <button onClick={handleOperation}>+ add op</button>
         </div>}
