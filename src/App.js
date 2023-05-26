@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Select from './components/Select';
 import Contant from './components/Contant';
 import Argument from './components/Argument';
